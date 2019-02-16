@@ -21,6 +21,10 @@ cheat-common:
 		koe-ohje/common/js/ koe-ohje/common/mathjax/ koe-ohje/common/tablesorter/ \
 		app/www/common/
 
+	# Replace non-american characters in filenames (PhoneGap dislikes them)
+	mv app/www/common/images/math/suorakulmainen-särmiö.png app/www/common/images/math/suorakulmainen-sarmio.png
+	mv app/www/common/images/math/suorakulmaisen-särmiön-tilavuus.png app/www/common/images/math/suorakulmaisen-sarmion-tilavuus.png
+
 cheat-build:
 	# Copy everything from cheat build to app except Abitti tab
 	rm -fR app/www/build/
