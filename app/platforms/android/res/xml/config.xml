@@ -8,13 +8,12 @@
         Sivuduuni Global Oy
     </author>
     <access origin="*" />
-    <icon src="app-icon-android-128.png" />
-    <icon density="ldpi" src="app-icon-android-32.png" />
-    <icon density="mdpi" src="app-icon-android-32.png" />
-    <icon density="hdpi" src="app-icon-android-64.png" />
-    <icon density="xhdpi" src="app-icon-android-128.png" />
-    <icon density="xxhdpi" src="app-icon-android-128.png" />
-    <icon density="xxxhdpi" src="app-icon-android-512.png" />
+    <icon density="ldpi" src="www/app-icon-android-32.png" />
+    <icon density="mdpi" src="www/app-icon-android-32.png" />
+    <icon density="hdpi" src="www/app-icon-android-64.png" />
+    <icon density="xhdpi" src="www/app-icon-android-128.png" />
+    <icon density="xxhdpi" src="www/app-icon-android-128.png" />
+    <icon density="xxxhdpi" src="www/app-icon-android-512.png" />
     <preference name="loglevel" value="DEBUG" />
     <preference name="phonegap-version" value="cli-7.0.1" />
 </widget>
