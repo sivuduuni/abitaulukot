@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget android-packageName="biz.sivuduuni.abitaulukot" id="biz.sivuduuni.abitaulukot" ios-CFBundleIdentifier="FIXME.biz.sivuduuni.abitaulukot" version="1.0.0" versionCode="1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Abitaulukot</name>
+    <description>
+        Offline version of Abitti help files including scientific tables.
+    </description>
+    <author email="office@sivuduuni.biz" href="http://sivuduuni.biz">
+        Sivuduuni Global Oy
+    </author>
+    <access origin="*" />
+    <icon src="app-icon-android-128.png" />
+    <icon density="ldpi" src="app-icon-android-32.png" />
+    <icon density="mdpi" src="app-icon-android-32.png" />
+    <icon density="hdpi" src="app-icon-android-64.png" />
+    <icon density="xhdpi" src="app-icon-android-128.png" />
+    <icon density="xxhdpi" src="app-icon-android-128.png" />
+    <icon density="xxxhdpi" src="app-icon-android-512.png" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="phonegap-version" value="cli-7.0.1" />
+</widget>

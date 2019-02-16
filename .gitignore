@@ -1,0 +1,4 @@
+# This contains https://github.com/digabi/koe-ohje
+# Update with "make update-cheat"
+koe-ohje/*
+
