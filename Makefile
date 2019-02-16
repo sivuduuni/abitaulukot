@@ -51,14 +51,6 @@ cheat-video: video-placeholder.webm
 app: cheat-root cheat-build cheat-common cheat-video
 	if [ ! -d app/www ]; then mkdir -p app/www; fi
 
-pgapp: app
-	rm -fR app-zip/
-	rm -f abitaulukot-pgapp.zip
-	mkdir app-zip
-	cp app/*.* app-zip/
-	cp -r app/www/* app-zip/
-	cd app-zip; zip -r ../abitaulukot-pgapp.zip *
-
 icons-android: icon/institution.svg
 	./convert_icon.sh icon/institution.svg app/www/app-icon-android-32.png 32
 	./convert_icon.sh icon/institution.svg app/www/app-icon-android-64.png 64
