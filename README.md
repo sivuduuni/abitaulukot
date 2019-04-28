@@ -26,6 +26,21 @@ The application icon file is stored at `icon/institution.svg`. This file used to
  1. Upload your `abitaulukot_android.keystore` to PhoneGap. "title" is a free-form string while "alias" is the alias of your
     deployment certificate ("abitaulukot_android" in the above example).
 
+### Apple Appstore Stuff
+
+ 1. Get a App ID for your application: [https://developer.apple.com/account/ios/identifier/bundle] (Identifiers > Abitaulukot).
+    You need this code to `ios-CFBundleIdentifier` located in `app/config.xml`
+ 1. Add distribution profile: [https://developer.apple.com/account/ios/profile/production] (Provisioning Profiles > Distribution).
+    * Development: iOS App Development
+    * Distribution: App Store
+    * Select the App ID and distributor (you)
+    * Enter profile name. This is for you only.
+    * Download the provisioning file (e.g. `Abitaulukot.mobileprovision`). You need this later.
+ 1. Download the distributor iOS Certificate: [https://developer.apple.com/account/ios/certificate/distribution] (Certificates > Production):
+    `ios_distribution.cer`. For more information on working with distrubutor certificate on Linux see
+    [https://patrickshuff.com/generatingsigning-ios-development-keys-on-linux-with-phonegap-build.html]
+ 1. Give your certificates (provisioning and distributor) to PhoneGap.
+
 ## Acknowledgements and Licenses
 
  * Content: MEB help files (MIT), contains FontAwesome (MIT)
