@@ -64,7 +64,7 @@ icons-android: icon/institution.svg
 icons-ios: icon/institution.svg
 	# iOS app icons
 	./convert_icon.sh icon/institution.svg app/www/app-icon-ios-1024.png 1024
-	cp app/www/app-icon-ios-114.png app/platforms/ios/Abitaulukot/Images.xcassets/AppIcon.appiconset/app-icon~ios-marketing.png
+	cp app/www/app-icon-ios-114.png app/platforms/ios/Abitaulukot/Images.xcassets/AppIcon.appiconset/icon@1x.png
 	./convert_icon.sh icon/institution.svg app/www/app-icon-ios-114.png 114
 	cp app/www/app-icon-ios-114.png app/platforms/ios/Abitaulukot/Images.xcassets/AppIcon.appiconset/icon@2x.png
 	./convert_icon.sh icon/institution.svg app/www/app-icon-ios-80.png 80
