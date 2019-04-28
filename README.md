@@ -6,6 +6,7 @@ Abitaulukot is a Cordova/PhoneGap wrap for (help files)[https://github.com/digab
 
  1. Run `make update-cheat` to get the latest version of MEB help files to `koe-ohje/`
  1. Run `make app` to update the version to `app/www/`. PhoneGap builds the app from this directory.
+ 1. Edit `app/config.xml`: Increase `versionCode` by one and edit `version` according to your version numbering principles.
  1. Push the update to your GitHub repo.
  1. Update the source and rebuild in Adobe PhoneGap.
 

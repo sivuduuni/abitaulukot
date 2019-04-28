@@ -12,7 +12,6 @@
 	<script type="text/javascript" src="../common/clipboard.min.js"></script>
 	<script type="text/javascript" src="../common/tablesorter/jquery.tablesorter.min.js"></script>
 	<script type="text/javascript" src="../common/js/activetab.js"></script>
-	<script type="text/javascript" src="../common/js/sameHeights.js"></script>
 	<script type="text/javascript" src="../common/js/copyLogic.js"></script>
 	<script type="text/javascript" src="../common/js/tableOfContents.js"></script>
 	<script type="text/javascript" src="../common/js/search.js"></script>
@@ -32,8 +31,7 @@
 		var subpage_init = {};
 
 		// If set shows this emergency message content in all pages
-		var EMERGENCY_MESSAGE = "<span class='fi'>Tämä versio koeohjeesta vastaa ylioppilastutkinnossa käytössä olevaa versiota. Abitti-tikulla on päivityksen aikana sattuneen virheen takia vanhempi versio ohjeesta.</span>"
-			+"<span class='sv'>Denna version av provinstruktionerna motsvara versionen som används i studentexamen. På grund av misstag som uppkommit under uppdateringen av Abitti, är en äldre version av instruktionerna på Abitti-pinnen.</span>";
+		var EMERGENCY_MESSAGE = null;
 
 		// Table-specific configuration for applyTablesorter()
 		var sorter_configuration = {
@@ -307,9 +305,9 @@
 			main_tabs.activeTabInitialise = {
 				'abitti': function () { write_to_stdout('abitti'); changePageTo("abitti", lang, main_tabs.tabNames, videoURLPrefix); },
 
-				'math': function () { write_to_stdout('math'); changePageTo("math", lang, main_tabs.tabNames, undefined, function () { setSameHeights(); }); },
-				'physics': function () { write_to_stdout('physics'); changePageTo("physics", lang, main_tabs.tabNames, undefined, function () { setSameHeights(); }); },
-				'chemistry': function () { write_to_stdout('chemistry'); changePageTo("chemistry", lang, main_tabs.tabNames, undefined, function () { setSameHeights(); }); },
+				'math': function () { write_to_stdout('math'); changePageTo("math", lang, main_tabs.tabNames); },
+				'physics': function () { write_to_stdout('physics'); changePageTo("physics", lang, main_tabs.tabNames); },
+				'chemistry': function () { write_to_stdout('chemistry'); changePageTo("chemistry", lang, main_tabs.tabNames); },
 
 				'spanish': function () { write_to_stdout('spanish'); changePageTo("spanish", lang, main_tabs.tabNames); },
 				'french': function () { write_to_stdout('french'); changePageTo("french", lang, main_tabs.tabNames); },
@@ -397,7 +395,6 @@
 		<div id="copy-text-kbd" class="copy-text"><span class="fi">Merkki kopioitu leikepöydälle.</span><span class="sv">Tecknet har kopierats till urklippet</span></div>
 	</div>
 	<script type="text/javascript" src="../common/js/tocbot.min.js"></script>
-	<script async="" type="text/javascript" src="../common/js/sameHeights.js"></script>
 
 
 
