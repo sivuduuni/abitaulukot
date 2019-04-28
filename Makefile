@@ -109,6 +109,8 @@ icons-ios: icon/institution.svg
 	cp icon/app-splash-ios-1536x2048.png app/platforms/ios/Abitaulukot/Images.xcassets/LaunchImage.launchimage/Default-Portrait@2x~ipad.png
 	cp icon/app-splash-ios-768x1024.png app/platforms/ios/Abitaulukot/Images.xcassets/LaunchImage.launchimage/Default-Portrait~ipad.png
 
+	cp icon/app-splash-ios-* app/www/
+
 	# These icons are created but not found in the app/platforms/ios/Abitaulukot/Images.xcassets/AppIcon.appiconset/
 	./convert_icon.sh icon/institution.svg app/www/app-icon-ios-60.png 60
 	./convert_icon.sh icon/institution.svg app/www/app-icon-ios-512.png 512
