@@ -56,46 +56,49 @@ app: cheat-root cheat-build cheat-common cheat-video
 	if [ ! -d app/www ]; then mkdir -p app/www; fi
 
 icons-android: icon/institution.svg
-	./convert_icon.sh icon/institution.svg app/www/app-icon-android-32.png 32
-	./convert_icon.sh icon/institution.svg app/www/app-icon-android-64.png 64
-	./convert_icon.sh icon/institution.svg app/www/app-icon-android-128.png 128
-	./convert_icon.sh icon/institution.svg app/www/app-icon-android-512.png 512
+	# Android app icons
+	# Android icons have transparent background
+	./convert_icon_bg-transp.sh icon/institution.svg app/www/app-icon-android-32.png 32
+	./convert_icon_bg-transp.sh icon/institution.svg app/www/app-icon-android-64.png 64
+	./convert_icon_bg-transp.sh icon/institution.svg app/www/app-icon-android-128.png 128
+	./convert_icon_bg-transp.sh icon/institution.svg app/www/app-icon-android-512.png 512
 
 icons-ios: icon/institution.svg
 	# iOS app icons
-	./convert_icon.sh icon/institution.svg app/www/app-icon-ios-1024.png 1024
+	# iOS icons have white background
+	./convert_icon_bg-white.sh icon/institution.svg app/www/app-icon-ios-1024.png 1024
 	cp app/www/app-icon-ios-114.png app/platforms/ios/Abitaulukot/Images.xcassets/AppIcon.appiconset/icon@1x.png
-	./convert_icon.sh icon/institution.svg app/www/app-icon-ios-114.png 114
+	./convert_icon_bg-white.sh icon/institution.svg app/www/app-icon-ios-114.png 114
 	cp app/www/app-icon-ios-114.png app/platforms/ios/Abitaulukot/Images.xcassets/AppIcon.appiconset/icon@2x.png
-	./convert_icon.sh icon/institution.svg app/www/app-icon-ios-80.png 80
+	./convert_icon_bg-white.sh icon/institution.svg app/www/app-icon-ios-80.png 80
 	cp app/www/app-icon-ios-80.png app/platforms/ios/Abitaulukot/Images.xcassets/AppIcon.appiconset/icon-40@2x.png
-	./convert_icon.sh icon/institution.svg app/www/app-icon-ios-40.png 40
+	./convert_icon_bg-white.sh icon/institution.svg app/www/app-icon-ios-40.png 40
 	cp app/www/app-icon-ios-40.png app/platforms/ios/Abitaulukot/Images.xcassets/AppIcon.appiconset/icon-40.png
-	./convert_icon.sh icon/institution.svg app/www/app-icon-ios-100.png 100
+	./convert_icon_bg-white.sh icon/institution.svg app/www/app-icon-ios-100.png 100
 	cp app/www/app-icon-ios-100.png app/platforms/ios/Abitaulukot/Images.xcassets/AppIcon.appiconset/icon-50@2x.png
-	./convert_icon.sh icon/institution.svg app/www/app-icon-ios-50.png 50
+	./convert_icon_bg-white.sh icon/institution.svg app/www/app-icon-ios-50.png 50
 	cp app/www/app-icon-ios-50.png app/platforms/ios/Abitaulukot/Images.xcassets/AppIcon.appiconset/icon-50.png
-	./convert_icon.sh icon/institution.svg app/www/app-icon-ios-120.png 120
+	./convert_icon_bg-white.sh icon/institution.svg app/www/app-icon-ios-120.png 120
 	cp app/www/app-icon-ios-120.png app/platforms/ios/Abitaulukot/Images.xcassets/AppIcon.appiconset/icon-60@2x.png
-	./convert_icon.sh icon/institution.svg app/www/app-icon-ios-180.png 180
+	./convert_icon_bg-white.sh icon/institution.svg app/www/app-icon-ios-180.png 180
 	cp app/www/app-icon-ios-180.png app/platforms/ios/Abitaulukot/Images.xcassets/AppIcon.appiconset/icon-60@3x.png
-	./convert_icon.sh icon/institution.svg app/www/app-icon-ios-144.png 144
+	./convert_icon_bg-white.sh icon/institution.svg app/www/app-icon-ios-144.png 144
 	cp app/www/app-icon-ios-144.png app/platforms/ios/Abitaulukot/Images.xcassets/AppIcon.appiconset/icon-72@2x.png
-	./convert_icon.sh icon/institution.svg app/www/app-icon-ios-72.png 72
+	./convert_icon_bg-white.sh icon/institution.svg app/www/app-icon-ios-72.png 72
 	cp app/www/app-icon-ios-72.png app/platforms/ios/Abitaulukot/Images.xcassets/AppIcon.appiconset/icon-72.png
-	./convert_icon.sh icon/institution.svg app/www/app-icon-ios-152.png 152
+	./convert_icon_bg-white.sh icon/institution.svg app/www/app-icon-ios-152.png 152
 	cp app/www/app-icon-ios-152.png app/platforms/ios/Abitaulukot/Images.xcassets/AppIcon.appiconset/icon-76@2x.png
-	./convert_icon.sh icon/institution.svg app/www/app-icon-ios-76.png 76
+	./convert_icon_bg-white.sh icon/institution.svg app/www/app-icon-ios-76.png 76
 	cp app/www/app-icon-ios-76.png app/platforms/ios/Abitaulukot/Images.xcassets/AppIcon.appiconset/icon-76.png
-	./convert_icon.sh icon/institution.svg app/www/app-icon-ios-167.png 167
+	./convert_icon_bg-white.sh icon/institution.svg app/www/app-icon-ios-167.png 167
 	cp app/www/app-icon-ios-167.png app/platforms/ios/Abitaulukot/Images.xcassets/AppIcon.appiconset/icon-83.5@2x.png
-	./convert_icon.sh icon/institution.svg app/www/app-icon-ios-57.png 57
+	./convert_icon_bg-white.sh icon/institution.svg app/www/app-icon-ios-57.png 57
 	cp app/www/app-icon-ios-57.png app/platforms/ios/Abitaulukot/Images.xcassets/AppIcon.appiconset/icon.png
-	./convert_icon.sh icon/institution.svg app/www/app-icon-ios-58.png 58
+	./convert_icon_bg-white.sh icon/institution.svg app/www/app-icon-ios-58.png 58
 	cp app/www/app-icon-ios-58.png app/platforms/ios/Abitaulukot/Images.xcassets/AppIcon.appiconset/icon-small@2x.png
-	./convert_icon.sh icon/institution.svg app/www/app-icon-ios-87.png 87
+	./convert_icon_bg-white.sh icon/institution.svg app/www/app-icon-ios-87.png 87
 	cp app/www/app-icon-ios-87.png app/platforms/ios/Abitaulukot/Images.xcassets/AppIcon.appiconset/icon-small@3x.png
-	./convert_icon.sh icon/institution.svg app/www/app-icon-ios-29.png 29
+	./convert_icon_bg-white.sh icon/institution.svg app/www/app-icon-ios-29.png 29
 	cp app/www/app-icon-ios-29.png app/platforms/ios/Abitaulukot/Images.xcassets/AppIcon.appiconset/icon-small.png
 
 	# iOS app launch images
@@ -114,7 +117,7 @@ icons-ios: icon/institution.svg
 	cp icon/app-splash-ios-* app/www/
 
 	# These icons are created but not found in the app/platforms/ios/Abitaulukot/Images.xcassets/AppIcon.appiconset/
-	./convert_icon.sh icon/institution.svg app/www/app-icon-ios-60.png 60
-	./convert_icon.sh icon/institution.svg app/www/app-icon-ios-512.png 512
+	./convert_icon_bg-white.sh icon/institution.svg app/www/app-icon-ios-60.png 60
+	./convert_icon_bg-white.sh icon/institution.svg app/www/app-icon-ios-512.png 512
 
 icons: icons-android icons-ios
