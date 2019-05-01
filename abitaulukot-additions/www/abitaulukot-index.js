@@ -41,8 +41,10 @@ function on_load () {
       // Swedish
       open_swedish_app();
     }
-
-    open_finnish_app();
+    else {
+      // Defaults to Finnish
+      open_finnish_app();
+    }
   }
   else {
     log_message("This is a browser app")
