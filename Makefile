@@ -7,8 +7,7 @@ update-cheat:
 	cd ..
 
 cheat-root:
-	# Copy root index.html
-	cp koe-ohje/index.html app/www/
+	cp koe-ohje/index.html app/www/index-cheat.html
 
 cheat-common:
 	# Copy everything from cheat common to app except videos
@@ -32,7 +31,6 @@ cheat-build:
 
 	cp -r koe-ohje/build/ app/www/
 
-
 replace-tab-abitti:
 	# Make changes to build/tab-abitti.html
 
@@ -41,7 +39,11 @@ replace-tab-abitti:
 
 replace-tabs: replace-tab-abitti
 
-app: cheat-root cheat-build cheat-common replace-tabs
+abitaulukot-additions: abitaulukot-additions/*
+	# Copy Abitaulukot additions on the top of the app
+	cp -r abitaulukot-additions/* app/
+
+app: cheat-build cheat-common cheat-root replace-tabs abitaulukot-additions
 	if [ ! -d app/www ]; then mkdir -p app/www; fi
 
 icons-android: icon/institution.svg

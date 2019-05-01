@@ -76,6 +76,10 @@
 
         <!-- Avoid mess with iOS status bar and Abitaulukot app -->
         <plugin name="cordova-plugin-statusbar-hide-on-startup" spec="0.1.7" />
+
+        <!-- To get UI language -->
+        <plugin name="cordova-plugin-globalization" spec="1.11.0" />
+
     </platform>
     <access origin="*" />
 </widget>
