@@ -33,26 +33,15 @@ cheat-build:
 	cp -r koe-ohje/build/ app/www/
 
 
-video-placeholder.webm: video-placeholder/video-placeholder/video-placeholder.ogg
-	ffmpeg -i "video-placeholder/video-placeholder/video-placeholder.ogg" -codec:v libvpx -quality good -cpu-used 0 -b:v 600k -qmin 10 -qmax 42 -maxrate 500k -bufsize 1000k -threads 2 -vf scale=640:-1 -an -pass 1 -y -f webm /dev/null
-	ffmpeg -i "video-placeholder/video-placeholder/video-placeholder.ogg" -codec:v libvpx -quality good -cpu-used 0 -b:v 600k -qmin 10 -qmax 42 -maxrate 500k -bufsize 1000k -threads 2 -vf scale=640:-1 -codec:a libvorbis -b:a 128k -pass 2 -f webm video-placeholder.webm
-	if [ -f ffmpeg2pass-0.log ]; then rm ffmpeg2pass-0.log; fi
+replace-tab-abitti:
+	# Make changes to build/tab-abitti.html
 
-cheat-video: video-placeholder.webm
-	# Replace original videos with a placeholder
-	rm -fR app/www/common/videos/
-	mkdir -p app/www/common/videos/fi/
-	mkdir -p app/www/common/videos/sv/
+	# Remove video tags
+	sed -i -e 's/<video.*><\/video>/<p class="fi">\[Videot on poistettu Abitaulukoista tallennustilan säästämiseksi.\]<\/p><p class="sv">\[Videor har tagits bort från Abitaulukot för att spara lagringsutrymme.\]<\/p>/g' app/www/build/tab-abitti.html
 
-	cp video-placeholder.webm app/www/common/videos/fi/1.webm
-	cp video-placeholder.webm app/www/common/videos/fi/2.webm
-	cp video-placeholder.webm app/www/common/videos/fi/3.webm
+replace-tabs: replace-tab-abitti
 
-	cp video-placeholder.webm app/www/common/videos/fi/1.webm
-	cp video-placeholder.webm app/www/common/videos/fi/2.webm
-	cp video-placeholder.webm app/www/common/videos/fi/3.webm
-
-app: cheat-root cheat-build cheat-common cheat-video
+app: cheat-root cheat-build cheat-common replace-tabs
 	if [ ! -d app/www ]; then mkdir -p app/www; fi
 
 icons-android: icon/institution.svg
