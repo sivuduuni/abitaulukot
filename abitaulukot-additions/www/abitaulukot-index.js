@@ -31,36 +31,18 @@ function is_pgapp () {
   }
 }
 
-function on_device_ready () {
-  if (navigator.globalization == undefined) {
-    log_message("navigator.glibalization does not exist, reverting back to language selection page");
-    open_url("index-cheat.html");
-    return;
-  }
-
-  navigator.globalization.getPreferredLanguage(
-    function (language) {
-      log_message("Detected UI language code: "+language.value);
-
-      if (language.value.substring(0,2) == "sv") {
-        // Swedish
-        open_swedish_app();
-      }
-
-      open_finnish_app();
-    },
-    function () {
-      // Error callback, use default language
-      log_message("get_user_language(): Failed to get device UI language, using default value");
-      open_finnish_app();
-    }
-  );
-}
-
 function on_load () {
   if (is_pgapp()) {
     log_message("This is a PhoneGap app");
-    document.addEventListener("deviceready", on_device_ready, false);
+    var lang = navigator.language || navigator.userLanguage;
+    log_message("My language code is: "+lang);
+
+    if (lang.substring(0,2) == "sv") {
+      // Swedish
+      open_swedish_app();
+    }
+
+    open_finnish_app();
   }
   else {
     log_message("This is a browser app")
