@@ -2,9 +2,7 @@
 
 update-cheat:
 	if [ ! -d koe-ohje ]; then git clone https://github.com/digabi/koe-ohje.git; cd ..; fi
-	cd koe-ohje
-	git pull
-	cd ..
+	cd koe-ohje; git pull
 
 cheat-root:
 	cp koe-ohje/index.html app/www/index-cheat.html
